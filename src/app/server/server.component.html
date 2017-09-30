@@ -1,0 +1,23 @@
+<h4>Two way binding</h4>
+<label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerNmae($event)">
+<br>
+<input type="text" class="form-control" [(ngModel)]="ServerName">
+<p>{{ ServerName }}</p>
+<hr>
+<h4>Data binding and event binding</h4>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCraeteServer()">Add Server</button>
+<h4>DataBinding</h4>
+<p [innerText]="allowNewServer"></p>
+<h4>String interpolation</h4>
+<p>{{ServerCreationStatus}}</p>
+<hr>
+<p>
+  {{'Server'}} with Id {{  serverid }} is {{ serverStatus }}
+</p>
+<hr>
+<h4>Calling a method</h4>
+<p>
+  {{'Server'}} with Id {{  serverid }} is {{ ngServerStatus() }}
+</p>
+
